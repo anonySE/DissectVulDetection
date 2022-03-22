@@ -134,14 +134,10 @@ This part is an instruction of our graph-based model, which leverages the advanc
 │   ├── joern-cli					<- Use Joern library to extract different graph edges.
 │   │   ├── bin
 │   │   ├── lib
-│   │   ├── data
 │   │   ├── graph					<- Scripts to generate various graphs.
 │   │   │   ├── ast.sc				<- Scripts to generate AST graph.
 │   │   │   ├── ast+cfg.sc			<- Scripts to generate AST+CFG combined graph.
 │   │   │   ├── all.sc				<- Scripts to generate AST+CFG+PDG composite graph.
-│   │   ├── parse_result
-│   │   ├── raw_result
-│   │   ├── result
 │   │   ├── joern
 │   │   ├── joern-parse
 │   ├── slicec_7edges_funcblock		<- Utils for extracting graphs.
