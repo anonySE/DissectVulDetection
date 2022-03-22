@@ -8,15 +8,15 @@ The basic idea of this part of the experiment is to combine different type of co
 
 ## Contents
 
-- [Getting Started](#getting started)
+- [Getting Started](#getting-started)
   - [Prerequisites](#Prerequisites)
     - [Softwares](#softwares)
-    - [Python Libraries](#python libraries)
+    - [Python Libraries](#python-libraries)
   - [Setup](#setup)
-- [Graph-based Model](#graph-based model)
-  - [Basic Structure](#basic structure)
-  - [Graph Processing](#graph processing)
-  - [Model Training](#model training)
+- [Graph-based Model](#graph-based-model)
+  - [Basic Structure](#basic-structure)
+  - [Graph Processing](#graph-processing)
+  - [Model Training](#model-training)
   - [Results](#results)
 - [Contact](#contact)
 - [Acknowledgements](#Acknowledgements)
