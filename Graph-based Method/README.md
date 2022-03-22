@@ -64,7 +64,7 @@ $ pip install -r requirements.txt
 ##### 3) Compile Java Source Code
 
 ```
-$ cd GraphProcessing/slicec_7edges_funcblock
+$ cd EdgeProcessing/slicec_7edges_funcblock
 $ javac -cp lib/org/eclipse/cdt.core/5.6.0.201402142303/*:lib/org/eclipse/equinox.common/3.6.200.v20130402-1505/*:lib/com.ibm.icu-4.4.2.jar -d bin src/main/java/slice/*.java src/main/java/sevenEdges/*.java src/main/java/sevenEdges/treeview/*.java src/main/java/sevenEdges/treeview/ast/*.java src/main/java/sevenEdges/nodeTraversal/*.java
 ```
 
@@ -129,7 +129,7 @@ This part is an instruction of our graph-based model, which leverages the advanc
 │   └── └── __init__.py	
 │   └── __init__.py
 |
-├── GraphProcessing					<- The graph processing module.
+├── EdgeProcessing					<- The graph processing module.
 │   ├── README.md					<- The README for developers extracting various graphs.
 │   ├── joern-cli					<- Use Joern library to extract different graph edges.
 │   │   ├── bin
@@ -150,14 +150,14 @@ This part is an instruction of our graph-based model, which leverages the advanc
 
 To construct various graph structures form C/C++, we use Eclipse CDT library and Joern to extract and integrate different graphs.
 
-<u>For more details, please reference ```GraphProcessing/README```.</u>
+<u>For more details, please reference ```EdgeProcessing/README```.</u>
 
 ##### 1) Slice Data
 
 We use CDT library to extract the target functions in sample files.
 
 ```
-$ cd GraphProcessing/slicec_7edges_funcblock
+$ cd EdgeProcessing/slicec_7edges_funcblock
 ```
 
 - Run slice.ClassifyFileOfProject to extract all the C file from the SARD dataset / Run slice.NvdClassifyFile for the NVD dataset.
@@ -168,13 +168,13 @@ $ cd GraphProcessing/slicec_7edges_funcblock
 We use Joern to extract edges of specific graphs and classify them by types. Then we traverse the source codes' AST nodes parsed by CDT library, and integrate edges with AST nodes to generate target graphs.
 
 ```
-$ cd GraphProcessing/joern-cli
+$ cd EdgeProcessing/joern-cli
 ```
 
 - Use Joern to get all the specific edge relationships(i.e. control flows and data flows)
 
 ```
-$ cd GraphProcessing/slicec_7edges_funcblock
+$ cd EdgeProcessing/slicec_7edges_funcblock
 ```
 
 - Run sevenEdges.Main to extract source codes' AST nodes from SARD / sevenEdges.NvdMain for the NVD dataset.
