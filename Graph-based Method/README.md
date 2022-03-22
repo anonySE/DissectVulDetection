@@ -9,7 +9,7 @@ The basic idea of this part of the experiment is to combine different type of co
 ## Contents
 
 - [Getting Started](#getting-started)
-  - [Prerequisites](#Prerequisites)
+  - [Prerequisites](#prerequisites)
     - [Softwares](#softwares)
     - [Python Libraries](#python-libraries)
   - [Setup](#setup)
@@ -19,7 +19,7 @@ The basic idea of this part of the experiment is to combine different type of co
   - [Model Training](#model-training)
   - [Results](#results)
 - [Contact](#contact)
-- [Acknowledgements](#Acknowledgements)
+- [Acknowledgements](#acknowledgements)
 
 
 
@@ -64,7 +64,7 @@ $ pip install -r requirements.txt
 ##### 3) Compile Java Source Code
 
 ```
-$ cd MultiGraphModel/GraphProcessing/slicec_7edges_funcblock
+$ cd GraphProcessing/slicec_7edges_funcblock
 $ javac -cp lib/org/eclipse/cdt.core/5.6.0.201402142303/*:lib/org/eclipse/equinox.common/3.6.200.v20130402-1505/*:lib/com.ibm.icu-4.4.2.jar -d bin src/main/java/slice/*.java src/main/java/sevenEdges/*.java src/main/java/sevenEdges/treeview/*.java src/main/java/sevenEdges/treeview/ast/*.java src/main/java/sevenEdges/nodeTraversal/*.java
 ```
 
@@ -157,7 +157,7 @@ To construct various graph structures form C/C++, we use Eclipse CDT library and
 We use CDT library to extract the target functions in sample files.
 
 ```
-$ cd MultiGraphModel/GraphProcessing/slicec_7edges_funcblock
+$ cd GraphProcessing/slicec_7edges_funcblock
 ```
 
 - Run slice.ClassifyFileOfProject to extract all the C file from the SARD dataset / Run slice.NvdClassifyFile for the NVD dataset.
@@ -168,10 +168,15 @@ $ cd MultiGraphModel/GraphProcessing/slicec_7edges_funcblock
 We use Joern to extract edges of specific graphs and classify them by types. Then we traverse the source codes' AST nodes parsed by CDT library, and integrate edges with AST nodes to generate target graphs.
 
 ```
-$ cd MultiGraphModel/GraphProcessing/slicec_7edges_funcblock
+$ cd GraphProcessing/joern-cli
 ```
 
 - Use Joern to get all the specific edge relationships(i.e. control flows and data flows)
+
+```
+$ cd GraphProcessing/slicec_7edges_funcblock
+```
+
 - Run sevenEdges.Main to extract source codes' AST nodes from SARD / sevenEdges.NvdMain for the NVD dataset.
 - Run sevenEdges.concateJoern to integrate nodes with edges.
 
@@ -180,6 +185,7 @@ $ cd MultiGraphModel/GraphProcessing/slicec_7edges_funcblock
 This part of the code provides a user-friendly interface. For a quick start, you can simply run the command below:
 
 ```
+$ cd GraphModelClient/cli
 $ CUDA_VISIBLE_DEVICES=0 python train.py GGNN GraphBinaryClassification ../data/data/ast_graph
 ```
 
