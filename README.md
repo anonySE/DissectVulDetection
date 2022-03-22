@@ -177,6 +177,7 @@ $ cd GraphProcessing/slicec_7edges_funcblock
 This part of the code provides a user-friendly interface. For a quick start, you can simply run the command below:
 
 ```
+$ cd GraphModelClient/cli
 $ CUDA_VISIBLE_DEVICES=0 python train.py GGNN GraphBinaryClassification ../data/data/ast_graph
 ```
 
