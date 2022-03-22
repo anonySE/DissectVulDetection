@@ -147,7 +147,7 @@ The basic idea of this part is to combine different types of code graph structur
 
 To construct various graph structures form C/C++, we use Eclipse CDT library and Joern to extract and integrate different graphs.
 
-<u>For more details, please reference ```EdgeProcessing/README```.</u>
+<u>For more details, please reference [EdgeProcessing/README](https://github.com/anonySE/DissectVulDetection/blob/main/Graph-based%20Method/EdgeProcessing/README.md).</u>
 
 ##### 1) Slice Data
 
